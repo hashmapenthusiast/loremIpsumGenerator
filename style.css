@@ -1,0 +1,11 @@
+p {
+    max-width: 75ch;
+    overflow-wrap: anywhere;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
