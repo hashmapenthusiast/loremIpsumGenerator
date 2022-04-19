@@ -10,252 +10,322 @@ function makeLorem(paragraphs = 1) {
 
 button.addEventListener('click', makeLorem)
 
-// {
-//     'ref': 'sheep',
-//     'und': 'ee'
-// },
-sounds = {
+let sounds = {
     "i:": {
-        "ref": "sheep",
+        "ref": "eel",
         "und": "ee",
-        "order": 0
+        "order": 0,
+        "pic": "assets/eel.jpg"
     },
     "ɪ": {
-        "ref": "ship",
+        "ref": "iguana",
         "und": "i",
-        "order": 1
+        "order": 1,
+        "pic": "assets/iguana.jpg"
     },
     "ʊ": {
-        "ref": "good",
+        "ref": "wood",
         "und": "oo",
-        "order": 2
+        "order": 2,
+        "pic": "assets/wood.jpg"
     },
     "u:": {
-        "ref": "shoot",
-        "und": "oo",
-        "order": 3
+        "ref": "blue",
+        "und": "u",
+        "order": 3,
+        "pic": "assets/blue.png"
     },
     "ɪə": {
-        "ref": "here",
-        "und": "ere",
-        "order": 4
+        "ref": "ear",
+        "und": "ear",
+        "order": 4,
+        "pic": "assets/ear.jpg"
     },
     "eɪ": {
-        "ref": "wait",
-        "und": "ai",
-        "order": 5
+        "ref": "eight",
+        "und": "ei",
+        "order": 5,
+        "pic": "assets/eight.jpg"
     },
     "e": {
-        "ref": "bed",
+        "ref": "egg",
         "und": "e",
-        "order": 6
+        "order": 6,
+        "pic": "assets/egg.webp"
     },
     "ə": {
-        "ref": "teacher",
-        "und": "er",
-        "order": 7
+        "ref": "balloon",
+        "und": "a",
+        "order": 7,
+        "pic": "assets/balloon.webp"
     },
     "ɜ:": {
-        "ref": "bird",
-        "und": "ir",
-        "order": 8
+        "ref": "elephant",
+        "und": "e",
+        "order": 8,
+        "pic": "assets/elephant.jpg"
     },
     "ɔ:": {
         "ref": "door",
         "und": "oor",
-        "order": 9
+        "order": 9,
+        "pic": "assets/door.webp"
     },
     "ʊə": {
-        "ref": "tourist",
-        "und": "ou",
-        "order": 10
+        "ref": "flower",
+        "und": "ow",
+        "order": 10,
+        "pic": "assets/flower.webp"
     },
     "ɔɪ": {
-        "ref": "boy",
-        "und": "oy",
-        "order": 11
+        "ref": "oil",
+        "und": "oi",
+        "order": 11,
+        "pic": "assets/oil.webp"
     },
     "əʊ": {
-        "ref": "show",
-        "und": "ow",
-        "order": 12
+        "ref": "old",
+        "und": "o",
+        "order": 12,
+        "pic": "assets/old.jpg"
     },
     "æ": {
-        "ref": "cat",
+        "ref": "ant",
         "und": "a",
-        "order": 13
+        "order": 13,
+        "pic": "assets/ant.webp"
     },
     "ʌ": {
-        "ref": "up",
+        "ref": "bus",
         "und": "u",
-        "order": 14
+        "order": 14,
+        "pic": "assets/bus.jpg"
     },
     "ɑ:": {
-        "ref": "far",
+        "ref": "arm",
         "und": "ar",
-        "order": 15
+        "order": 15,
+        "pic": "assets/arm.jpg"
     },
     "ɒ": {
-        "ref": "on",
+        "ref": "knot",
         "und": "o",
-        "order": 16
+        "order": 16,
+        "pic": "assets/knot.jpg"
     },
     "eə": {
-        "ref": "hair",
-        "und": "air",
-        "order": 17
+        "ref": "pear",
+        "und": "ea",
+        "order": 17,
+        "pic": "assets/pear.png"
     },
     "ɑɪ": {
-        "ref": "my",
-        "und": "y",
-        "order": 18
+        "ref": "pie",
+        "und": "i",
+        "order": 18,
+        "pic": "assets/pie.jpg"
     },
     "ɑʊ": {
-        "ref": "cow",
+        "ref": "owl",
         "und": "ow",
-        "order": 19
+        "order": 19,
+        "pic": "assets/owl.jpg"
     },
     "p": {
-        "ref": "pea",
+        "ref": "parrot",
         "und": "p",
-        "order": 20
+        "order": 20,
+        "pic": "assets/parrot.jpg"
     },
     "b": {
-        "ref": "boat",
+        "ref": "bubble",
         "und": "b",
-        "order": 21
+        "order": 21,
+        "pic": "assets/bubble.webp"
     },
     "t": {
-        "ref": "tea",
+        "ref": "tiger",
         "und": "t",
-        "order": 22
+        "order": 22,
+        "pic": "assets/tiger.webp"
     },
     "d": {
         "ref": "dog",
         "und": "d",
-        "order": 23
+        "order": 23,
+        "pic": "assets/dog.jpg"
     },
     "tʃ": {
         "ref": "cheese",
         "und": "ch",
-        "order": 24
+        "order": 24,
+        "pic": "assets/cheese.webp"
     },
     "dʒ": {
-        "ref": "June",
-        "und": "J",
-        "order": 25
+        "ref": "giraffe",
+        "und": "g",
+        "order": 25,
+        "pic": "assets/giraffe.jpg"
     },
     "k": {
         "ref": "car",
         "und": "c",
-        "order": 26
+        "order": 26,
+        "pic": "assets/car.jpg"
     },
     "ɡ": {
-        "ref": "go",
+        "ref": "gun",
         "und": "g",
-        "order": 27
+        "order": 27,
+        "pic": "assets/gun.jpg"
     },
     "f": {
-        "ref": "fly",
+        "ref": "fox",
         "und": "f",
-        "order": 28
+        "order": 28,
+        "pic": "assets/fox.jpg"
     },
     "v": {
-        "ref": "video",
+        "ref": "vampire",
         "und": "v",
-        "order": 29
+        "order": 29,
+        "pic": "assets/vampire.webp"
     },
     "θ": {
-        "ref": "think",
+        "ref": "three",
         "und": "th",
-        "order": 30
+        "order": 30,
+        "pic": "assets/three.png"
     },
     "ð": {
-        "ref": "this",
+        "ref": "thanos",
         "und": "th",
-        "order": 31
+        "order": 31,
+        "pic": "assets/thanos.jpeg"
     },
     "s": {
-        "ref": "see",
+        "ref": "snake",
         "und": "s",
-        "order": 32
+        "order": 32,
+        "pic": "assets/snake.webp"
     },
     "z": {
-        "ref": "zoo",
+        "ref": "zebra",
         "und": "z",
-        "order": 33
+        "order": 33,
+        "pic": "assets/zebra.webp"
     },
     "ʃ": {
-        "ref": "shall",
+        "ref": "shoe",
         "und": "sh",
-        "order": 34
+        "order": 34,
+        "pic": "assets/shoe.webp"
     },
     "ʒ": {
-        "ref": "television",
+        "ref": "treasure",
         "und": "s",
-        "order": 35
+        "order": 35,
+        "pic": "assets/treasure.jpg"
     },
     "m": {
-        "ref": "man",
+        "ref": "money",
         "und": "m",
-        "order": 36
+        "order": 36,
+        "pic": "assets/money.jpg"
     },
     "n": {
-        "ref": "now",
+        "ref": "net",
         "und": "n",
-        "order": 37
+        "order": 37,
+        "pic": "assets/net.jpg"
     },
     "ŋ": {
-        "ref": "sing",
+        "ref": "long",
         "und": "ng",
-        "order": 38
+        "order": 38,
+        "pic": "assets/long.png"
     },
     "h": {
-        "ref": "hat",
+        "ref": "house",
         "und": "h",
-        "order": 39
+        "order": 39,
+        "pic": "assets/house.png"
     },
     "l": {
-        "ref": "love",
+        "ref": "lion",
         "und": "l",
-        "order": 40
+        "order": 40,
+        "pic": "assets/lion.jpg"
     },
     "r": {
         "ref": "red",
         "und": "r",
-        "order": 41
+        "order": 41,
+        "pic": "assets/red.png"
     },
     "w": {
-        "ref": "wet",
+        "ref": "water",
         "und": "w",
-        "order": 42
+        "order": 42,
+        "pic": "assets/water.jpg"
     },
     "j": {
-        "ref": "yes",
+        "ref": "yellow",
         "und": "y",
-        "order": 43
+        "order": 43,
+        "pic": "assets/yellow.webp"
     }
 }
 let table = document.createElement('table')
 const trs = []
-for (let i = 0; i <6;i++){
+for (let i = 0; i < 6; i++) {
     trs.push(document.createElement('tr'))
 }
+
 let i = 0
-let c=0
+let c = 0
 for (let v in sounds) {
-    if (i===6||i==13||i===20||i===28||i===36){
+    if (i === 6
+        || i == 13
+        || i === 20
+        || i === 28
+        || i === 36) {
         table.appendChild(trs[c])
         c++
     }
     let td = document.createElement('td');
-    td.innerHTML = v
-    td.className = 'row-'+c
+    function underline(a, b) {
+        let answer = ''
+        console.log(a, b)
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === b[0]) {
+                let exit = false;
+                for (let j = 1; j < b.length; j++) {
+                    if (a[i + j] !== b[j]) {
+                        exit=true;
+                    }
+                }
+                if (exit) {
+                    answer += a[i];
+                    continue;
+
+                }
+                answer += '<strong>' + b + '</strong>'
+                i += b.length
+                if (i >= a.length) {
+                    break;
+                }
+            }
+            answer += a[i];
+        }
+        return answer
+    }
+    td.innerHTML = `${v}<br><img src="${sounds[v].pic}"><br>${underline(sounds[v].ref, sounds[v].und)}`
+    td.className = 'row-' + c
     trs[c].appendChild(td)
     i++
-}       
- table.appendChild(trs[c])
+}
+table.appendChild(trs[c])
 
 document.body.appendChild(table)
-console.log(sounds)
 
